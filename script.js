@@ -44,34 +44,24 @@ document.querySelectorAll('.mini-terminal').forEach(item => {
             item.innerText = originalText;
             item.style.color = '#2ecc71';
         }, 1500);
-        function copyEmail() {
-    // Pega o valor do e-mail
-    var emailValue = document.getElementById("myEmail").value;
+        function copyEmail(event) {
+    // Impede qualquer comportamento padrão do link
+    event.preventDefault();
     
-    // Copia para a área de transferência
-    navigator.clipboard.writeText(emailValue).then(function() {
-        // Altera o texto do botão temporariamente
-        var btnText = document.getElementById("emailText");
-        var originalText = btnText.innerHTML;
-        btnText.innerHTML = "Copiado!";
-        
-        // Volta ao normal depois de 2 segundos
-        setTimeout(function() {
-            btnText.innerHTML = originalText;
-        }, 2000);
-    });
-
-            function copyEmail() {
-    const email = document.getElementById("myEmail").value;
+    const meuEmail = "ContatoPaperLinux@proton.me"; // <-- COLOQUE SEU EMAIL AQUI
     const textSpan = document.getElementById("emailText");
     
-    navigator.clipboard.writeText(email).then(() => {
+    navigator.clipboard.writeText(meuEmail).then(() => {
+        const originalText = textSpan.innerText;
         textSpan.innerText = "Copiado!";
+        
+        // Feedback visual rápido
         setTimeout(() => {
-            textSpan.innerText = "E-mail";
+            textSpan.innerText = originalText;
         }, 2000);
     }).catch(err => {
-        console.error('Erro ao copiar: ', err);
+        alert("E-mail: " + meuEmail); // Fallback caso o navegador bloqueie o clipboard
     });
 }
+
 
