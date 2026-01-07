@@ -150,10 +150,11 @@
                     <span>YouTube</span>
                 </a>
 
-                <a href="mailto:ContatoPaperLinux@proton.me" class="social-box email">
+                <div class="social-box email" onclick="copyEmail()" id="btnEmail">
                     <i class="fas fa-envelope"></i>
-                    <span>Contato</span>
-                </a>
+                    <span id="emailText">E-mail</span>
+                    <input type="hidden" id="myEmail" value="contato@paperlinux.com">
+                </div>
 
             </div>
         </div>
@@ -166,5 +167,6 @@
     <script src="script.js"></script>
 </body>
 </html>
+
 
 
