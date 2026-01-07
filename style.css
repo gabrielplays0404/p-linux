@@ -185,31 +185,49 @@ footer { padding: 50px 0; background: #eee; text-align: center; font-size: 0.9re
 
 /* Redes Sociais */    
 
-.social-box {
+.social-grid {
     display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+/* Esta regra agora vale para <a> e para <div> */
+.social-box {
+    display: flex !important;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     width: 150px;
-    padding: 20px;
+    height: 120px;
     border-radius: 12px;
     text-decoration: none;
-    color: white;
+    color: #ffffff !important; /* Força o texto branco em ambos */
     font-weight: bold;
-    transition: transform 0.3s, box-shadow 0.3s;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: none;
 }
 
 .social-box i {
-    font-size: 2.5rem;
+    font-size: 2.2rem;
     margin-bottom: 10px;
+    pointer-events: none; /* Evita que o clique no ícone bugue o script */
+}
+
+.social-box span {
+    font-size: 1rem;
+    pointer-events: none;
 }
 
 .social-box:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    transform: translateY(-5px);
+    filter: brightness(1.1);
 }
 
 /* Cores das Redes */
 .github   { background-color: #333; }
 .youtube  { background-color: #ff0000; }
 .email    { background-color: #27ae60; }
+
