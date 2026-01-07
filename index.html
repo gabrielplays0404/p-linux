@@ -14,8 +14,8 @@
             <h1 class="logo">Paper<span>Linux</span></h1>
             <ul>
                 <li><a href="#inicio">Início</a></li>
-                <li><a href="#galeria">Galeria</a></li>
                 <li><a href="#requisitos">Requisitos</a></li>
+                <li><a href="#galeria">Galeria</a></li>
                 <li><a href="#instalacao">Instalação</a></li>
                 <li><a href="#pos-instalacao">Pós-Instalação</a></li>
                 <li><a href="#download" class="btn-nav">Download</a></li>
@@ -26,42 +26,86 @@
     <header id="inicio">
         <div class="container hero">
             <h2>Simplicidade de papel. <br>Performance de aço.</h2>
-            <p>A distro Debian leve para reviver PCs e acelerar o seu dia a dia.</p>
+            <p>A distro baseada em Debian feita para ser rápida em qualquer hardware.</p>
             <div class="hero-btns">
                 <a href="#download" class="btn-primary">Baixar Agora</a>
-                <a href="#galeria" class="btn-secondary">Ver Interface</a>
+                <a href="#requisitos" class="btn-secondary">Saber Mais</a>
             </div>
         </div>
     </header>
 
-    <section id="galeria">
+    <section id="requisitos">
         <div class="container">
-            <h3 class="section-title">Interface do Sistema</h3>
-            <div class="galeria-grid">
-                <div class="foto">
-                    <img src="print1.jpg" alt="Desktop Paper Linux">
-                    <p>IceWM: Leveza Extrema</p>
+            <h3 class="section-title">Requisitos do Sistema</h3>
+            <div class="grid-requisitos">
+                <div class="card">
+                    <i class="fas fa-microchip"></i>
+                    <h4>Processador</h4>
+                    <p>Intel/AMD 1GHz ou superior</p>
                 </div>
-                <div class="foto">
-                    <img src="print2.jpg" alt="LXTerminal e Arquivos">
-                    <p>LXTerminal e PCManFM</p>
+                <div class="card">
+                    <i class="fas fa-memory"></i>
+                    <h4>Memória RAM</h4>
+                    <p>512MB (Mínimo) | 2GB (Ideal)</p>
                 </div>
-                <div class="foto">
-                    <img src="print3.jpg" alt="Firefox">
-                    <p>Firefox Otimizado</p>
+                <div class="card">
+                    <i class="fas fa-hdd"></i>
+                    <h4>Espaço</h4>
+                    <p>2GB para instalação base</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="pos-instalacao">
+    <section id="galeria" style="background-color: #f4f7f6;">
+        <div class="container">
+            <h3 class="section-title">Interface do Sistema</h3>
+            <div class="galeria-grid">
+                <div class="foto">
+                    <img src="print1.png" alt="Desktop Paper Linux">
+                    <p>IceWM: Foco em performance</p>
+                </div>
+                <div class="foto">
+                    <img src="print2.png" alt="Terminal e Arquivos">
+                    <p>Ferramentas essenciais inclusas</p>
+                </div>
+                <div class="foto">
+                    <img src="print3.png" alt="Firefox">
+                    <p>Navegação fluida</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="instalacao">
+        <div class="container">
+            <h3 class="section-title">Como Instalar</h3>
+            <div class="instrucao-container">
+                <p>No modo Live, abra o terminal seguindo o caminho:</p>
+                <div class="fluxo-instalacao">
+                    <span class="step">Botão IceWM</span>
+                    <i class="fas fa-chevron-right separator"></i>
+                    <span class="step">Toolbar</span>
+                    <i class="fas fa-chevron-right separator"></i>
+                    <span class="step">Xterm</span>
+                </div>
+                <p>Execute o instalador oficial:</p>
+                <div class="terminal-box">
+                    <span class="prompt">#</span> <code id="cmd-text">sudo paper-install</code>
+                    <button type="button" onclick="copyCommand()"><i class="fas fa-copy"></i></button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="pos-instalacao" style="background-color: #f4f7f6;">
         <div class="container">
             <h3 class="section-title">Guia Pós-Instalação</h3>
             <div class="grid-dicas">
                 <div class="dica-card">
                     <div class="step-number">1</div>
                     <i class="fas fa-wifi"></i>
-                    <h4>Wi-Fi</h4>
+                    <h4>Conectar Wi-Fi</h4>
                     <div class="mini-terminal">sudo nmtui</div>
                 </div>
                 <div class="dica-card">
@@ -78,10 +122,10 @@
                 </div>
                 <div class="dica-card">
                     <div class="step-number">4</div>
-                    <i class="fas fa-edit"></i>
+                    <i class="fas fa-clock"></i>
                     <h4>Hora Manual</h4>
                     <div class="mini-terminal">sudo date -s "2026-01-07 10:30:00"</div>
-                    <p style="font-size: 0.7rem; margin-top:5px;">Salve na BIOS: <code>sudo hwclock --systohc</code></p>
+                    <p style="font-size: 0.7rem; margin-top:5px;">BIOS: <code>sudo hwclock --systohc</code></p>
                 </div>
             </div>
         </div>
@@ -93,29 +137,8 @@
             <div class="download-grid">
                 <div class="dl-card">
                     <h4>v1.0 Standard (64-bit)</h4>
-                    <p>Recomendado para PCs modernos.</p>
-                    <a href="https://drive.proton.me/urls/QHCJ89YJK8#bqxjCCQjJKfn" 
-                       target="_blank" class="btn-dl">Download Proton Drive</a>
+                    <a href="https://drive.proton.me/urls/QHCJ89YJK8#bqxjCCQjJKfn" target="_blank" class="btn-dl">Download via Proton</a>
                 </div>
                 <div class="dl-card">
                     <h4>v1.0 Legacy (32-bit)</h4>
-                    <p>Hardware antigo e 32-bit.</p>
-                    <a href="https://drive.proton.me/urls/CH4RVC2TN0#9r54EemcpTdw" 
-                       target="_blank" class="btn-dl">Download Proton Drive</a>
-                </div>
-            </div>
-
-            <div style="background: rgba(255,255,255,0.1); border-left: 5px solid #ffc107; padding: 20px; margin-top: 40px; border-radius: 5px;">
-                <h4 style="color: #ffc107; margin-bottom: 10px;"><i class="fas fa-info-circle"></i> Problemas no Boot (32-bit)?</h4>
-                <p>Se a versão Legacy travar em um cursor piscante, edite o boot no GRUB (tecla 'e') e adicione o parâmetro <strong>nomodeset</strong> no final da linha que inicia com 'linux'.</p>
-            </div>
-        </div>
-    </section>
-
-    <footer>
-        <p>&copy; 2026 Paper Linux OS.</p>
-    </footer>
-
-    <script src="script.js"></script>
-</body>
-</html>
+                    <a href="https://drive.proton.me/urls/CH4RVC2TN0#9r54EemcpTdw" target="_blank" class="btn-
