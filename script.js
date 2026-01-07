@@ -45,23 +45,40 @@ document.querySelectorAll('.mini-terminal').forEach(item => {
             item.style.color = '#2ecc71';
         }, 1500);
         function copyEmail(event) {
-    // Impede qualquer comportamento padrão do link
     event.preventDefault();
     
-    const meuEmail = "ContatoPaperLinux@proton.me"; // <-- COLOQUE SEU EMAIL AQUI
+    const emailParaCopiar = "contato@paperlinux.com"; // <-- SEU EMAIL AQUI
     const textSpan = document.getElementById("emailText");
-    
-    navigator.clipboard.writeText(meuEmail).then(() => {
+
+    // Cria um elemento de input invisível
+    const tempInput = document.createElement("input");
+    tempInput.value = emailParaCopiar;
+    document.body.appendChild(tempInput);
+
+    // Seleciona e copia o conteúdo
+    tempInput.select();
+    tempInput.setSelectionRange(0, 99999); // Para dispositivos móveis
+
+    try {
+        document.execCommand("copy");
+        
+        // Feedback visual
         const originalText = textSpan.innerText;
         textSpan.innerText = "Copiado!";
         
-        // Feedback visual rápido
         setTimeout(() => {
             textSpan.innerText = originalText;
         }, 2000);
-    }).catch(err => {
-        alert("E-mail: " + meuEmail); // Fallback caso o navegador bloqueie o clipboard
+    } catch (err) {
+        console.error("Erro ao copiar", err);
+        alert("E-mail: " + emailParaCopiar);
+    }
+
+    // Remove o input temporário
+    document.body.removeChild(tempInput);
+}
     });
 }
+
 
 
