@@ -183,3 +183,33 @@ footer { padding: 50px 0; background: #eee; text-align: center; font-size: 0.9re
 
 }
 
+/* Redes Sociais */    
+
+.social-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 150px;
+    padding: 20px;
+    border-radius: 12px;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.social-box i {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.social-box:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+/* Cores das Redes */
+.github   { background-color: #333; }
+.youtube  { background-color: #ff0000; }
+.email    { background-color: #27ae60; }
