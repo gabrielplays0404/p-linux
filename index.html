@@ -15,9 +15,8 @@
             <ul>
                 <li><a href="#inicio">Início</a></li>
                 <li><a href="#sobre">Sobre</a></li>
-                <li><a href="#notas">Notas</a></li>
-                <li><a href="#requisitos">Requisitos</a></li>
-                <li><a href="#pos-instalacao">Pós-Instalação</a></li>
+                <li><a href="#galeria">Galeria</a></li>
+                <li><a href="#instalacao">Instalação</a></li>
                 <li><a href="#download" class="btn-nav">Download</a></li>
             </ul>
         </div>
@@ -37,18 +36,18 @@
     <section id="sobre" style="padding: 60px 0; background: #fff;">
         <div class="container">
             <h3 class="section-title">Sobre a Paper Linux</h3>
-            <p style="text-align:center; max-width:800px; margin: 0 auto;">Unindo a estabilidade do <strong>Debian</strong> com a leveza do <strong>IceWM</strong>.</p>
+            <p style="text-align:center; max-width:800px; margin: 0 auto;">Unindo a estabilidade inabalável do <strong>Debian</strong> com a leveza extrema do <strong>IceWM</strong>.</p>
         </div>
     </section>
 
     <section id="notas" style="padding: 60px 0; background: #f9f9f9;">
         <div class="container">
             <h3 class="section-title">Notas de Lançamento v1.0</h3>
-            <div style="background:white; padding:20px; border-radius:10px; border:1px solid #ddd;">
-                <ul>
-                    <li>Base Debian Stable (2026)</li>
-                    <li>Correção de boot 32-bit (nomodeset)</li>
-                    <li>Scripts de configuração pós-instalação</li>
+            <div style="background:white; padding:25px; border-radius:10px; border:1px solid #ddd; max-width: 800px; margin: 0 auto;">
+                <ul style="list-style: none; padding: 0;">
+                    <li><i class="fas fa-check" style="color:green"></i> Base Debian Stable (2026)</li>
+                    <li><i class="fas fa-check" style="color:green"></i> Correção de boot 32-bit (nomodeset)</li>
+                    <li><i class="fas fa-check" style="color:green"></i> Kernel otimizado para baixo consumo de RAM</li>
                 </ul>
             </div>
         </div>
@@ -65,9 +64,41 @@
         </div>
     </section>
 
+    <section id="galeria" style="padding: 60px 0; background: #f4f7f6;">
+        <div class="container">
+            <h3 class="section-title">Interface do Sistema</h3>
+            <div class="galeria-grid">
+                <div class="foto">
+                    <img src="print1.jpg" alt="Desktop Paper Linux">
+                    <p>Ambiente IceWM</p>
+                </div>
+                <div class="foto">
+                    <img src="print2.jpg" alt="Terminal">
+                    <p>Terminal Leve</p>
+                </div>
+                <div class="foto">
+                    <img src="print3.jpg" alt="Navegador">
+                    <p>Firefox Otimizado</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="instalacao" style="padding: 60px 0;">
+        <div class="container">
+            <h3 class="section-title">Como Instalar</h3>
+            <div style="text-align: center; max-width: 600px; margin: 0 auto;">
+                <p>Abra o terminal (Xterm) e digite o comando abaixo:</p>
+                <div class="terminal-box" style="background: #333; color: #fff; padding: 20px; border-radius: 5px; margin-top: 20px; position: relative;">
+                    <code>sudo paper-install</code>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <section id="pos-instalacao" style="padding: 60px 0; background: #f4f7f6;">
         <div class="container">
-            <h3 class="section-title">Pós-Instalação</h3>
+            <h3 class="section-title">Guia Pós-Instalação</h3>
             <div class="grid-dicas">
                 <div class="dica-card"><h4>1. Wi-Fi</h4><div class="mini-terminal">sudo nmtui</div></div>
                 <div class="dica-card"><h4>2. Configurar</h4><div class="mini-terminal">configurar</div></div>
@@ -78,32 +109,33 @@
     </section>
 
     <section id="download" style="background-color: #2c3e50; color: white; padding: 80px 0;">
-        <div class="container">
-            <h3 class="section-title" style="color: white;">Download</h3>
-            <div class="download-grid" style="display: flex; gap: 20px; flex-wrap: wrap; justify-content: center;">
-                <div class="dl-card" style="background: #34495e; padding: 30px; border-radius: 10px; text-align: center; min-width: 280px;">
-                    <h4>64-bit Standard</h4>
-                    <a href="https://drive.proton.me/urls/QHCJ89YJK8#bqxjCCQjJKfn" target="_blank" class="btn-dl" style="background: #3498db; color: white; padding: 10px 20px; display: inline-block; margin-top: 15px; text-decoration: none; border-radius: 5px;">Download Proton</a>
+        <div class="container text-center">
+            <h3 class="section-title" style="color: white;">Download Paper Linux</h3>
+            <div class="download-grid" style="display: flex; gap: 30px; flex-wrap: wrap; justify-content: center; margin-top: 30px;">
+                <div class="dl-card" style="background: #34495e; padding: 30px; border-radius: 10px; min-width: 280px; text-align: center;">
+                    <h4>v1.0 Standard (64-bit)</h4>
+                    <a href="https://drive.proton.me/urls/QHCJ89YJK8#bqxjCCQjJKfn" target="_blank" class="btn-dl" style="background: #3498db; color: white; padding: 12px 20px; display: inline-block; margin-top: 15px; text-decoration: none; border-radius: 5px; font-weight: bold;">Download via Proton</a>
                 </div>
-                <div class="dl-card" style="background: #34495e; padding: 30px; border-radius: 10px; text-align: center; min-width: 280px;">
-                    <h4>32-bit Legacy</h4>
-                    <a href="https://drive.proton.me/urls/CH4RVC2TN0#9r54EemcpTdw" target="_blank" class="btn-dl" style="background: #3498db; color: white; padding: 10px 20px; display: inline-block; margin-top: 15px; text-decoration: none; border-radius: 5px;">Download Proton</a>
+                <div class="dl-card" style="background: #34495e; padding: 30px; border-radius: 10px; min-width: 280px; text-align: center;">
+                    <h4>v1.0 Legacy (32-bit)</h4>
+                    <a href="https://drive.proton.me/urls/CH4RVC2TN0#9r54EemcpTdw" target="_blank" class="btn-dl" style="background: #e67e22; color: white; padding: 12px 20px; display: inline-block; margin-top: 15px; text-decoration: none; border-radius: 5px; font-weight: bold;">Download via Proton</a>
                 </div>
             </div>
+            <p style="margin-top: 30px; font-size: 0.9rem; opacity: 0.8;">Dica: Se a versão 32-bit travar, use <strong>nomodeset</strong> no GRUB.</p>
         </div>
     </section>
 
-    <footer class="main-footer">
+    <footer class="main-footer" style="padding: 40px 0; background: #1a252f; color: #bdc3c7; text-align: center;">
         <div class="container">
-            <p>&copy; 2026 Paper Linux OS</p>
-            <div class="social-links">
-                <a href="#"><i class="fab fa-github"></i></a>
-                <a href="#"><i class="fab fa-telegram"></i></a>
+            <p>&copy; 2026 Paper Linux OS. Base Debian + IceWM.</p>
+            <div style="margin-top: 15px;">
+                <a href="#" style="color: white; margin: 0 10px;"><i class="fab fa-github"></i> GitHub</a>
+                <a href="#" style="color: white; margin: 0 10px;"><i class="fab fa-telegram"></i> Telegram</a>
             </div>
         </div>
     </footer>
 
-    <button onclick="topFunction()" id="btnTop" title="Voltar ao topo"><i class="fas fa-arrow-up"></i></button>
+    <button onclick="topFunction()" id="btnTop" title="Voltar ao topo" style="position: fixed; bottom: 20px; right: 30px; background: #3498db; color: white; border: none; padding: 15px; border-radius: 50%; cursor: pointer; display: none;"><i class="fas fa-arrow-up"></i></button>
 
     <script src="script.js"></script>
 </body>
