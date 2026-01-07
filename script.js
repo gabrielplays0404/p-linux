@@ -31,7 +31,7 @@ document.querySelectorAll('nav a[href^="#"]').forEach(anchor => {
 document.addEventListener('DOMContentLoaded', function() {
     const btnEmail = document.getElementById('copy-email-button');
     const textSpan = document.getElementById('emailText');
-    const emailParaCopiar = "contato@paperlinux.com"; // Troque pelo seu e-mail
+    const emailParaCopiar = "ContatoPaperLinux@proton.me"; // Troque pelo seu e-mail
 
     if (btnEmail) {
         btnEmail.addEventListener('click', function() {
@@ -64,6 +64,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 });
+
 
 
 
