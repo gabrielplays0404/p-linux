@@ -44,5 +44,20 @@ document.querySelectorAll('.mini-terminal').forEach(item => {
             item.innerText = originalText;
             item.style.color = '#2ecc71';
         }, 1500);
+        function copyEmail() {
+    // Pega o valor do e-mail
+    var emailValue = document.getElementById("myEmail").value;
+    
+    // Copia para a área de transferência
+    navigator.clipboard.writeText(emailValue).then(function() {
+        // Altera o texto do botão temporariamente
+        var btnText = document.getElementById("emailText");
+        var originalText = btnText.innerHTML;
+        btnText.innerHTML = "Copiado!";
+        
+        // Volta ao normal depois de 2 segundos
+        setTimeout(function() {
+            btnText.innerHTML = originalText;
+        }, 2000);
     });
-});
+}
