@@ -60,4 +60,18 @@ document.querySelectorAll('.mini-terminal').forEach(item => {
             btnText.innerHTML = originalText;
         }, 2000);
     });
+
+            function copyEmail() {
+    const email = document.getElementById("myEmail").value;
+    const textSpan = document.getElementById("emailText");
+    
+    navigator.clipboard.writeText(email).then(() => {
+        textSpan.innerText = "Copiado!";
+        setTimeout(() => {
+            textSpan.innerText = "E-mail";
+        }, 2000);
+    }).catch(err => {
+        console.error('Erro ao copiar: ', err);
+    });
 }
+
