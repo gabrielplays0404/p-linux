@@ -195,29 +195,17 @@ footer { padding: 50px 0; background: #eee; text-align: center; font-size: 0.9re
 
 /* Esta regra agora vale para <a> e para <div> */
 .social-box {
+    cursor: pointer !important;
+    pointer-events: auto !important;
     display: flex !important;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 150px;
-    height: 120px;
-    border-radius: 12px;
-    text-decoration: none;
-    color: #ffffff !important; /* Força o texto branco em ambos */
-    font-weight: bold;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    border: none;
 }
 
-.social-box i {
-    font-size: 2.2rem;
-    margin-bottom: 10px;
-    pointer-events: none; /* Evita que o clique no ícone bugue o script */
-}
-
+/* Isso impede que o ícone ou o texto "roubem" o clique do botão */
+.social-box i, 
 .social-box span {
-    font-size: 1rem;
     pointer-events: none;
 }
 
@@ -233,5 +221,6 @@ footer { padding: 50px 0; background: #eee; text-align: center; font-size: 0.9re
 .github   { background-color: #333; }
 .youtube  { background-color: #ff0000; }
 .email    { background-color: #27ae60; }
+
 
 
