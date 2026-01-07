@@ -128,6 +128,14 @@
                     <h4>Sincronizar BIOS</h4>
                     <p>Se o relógio estiver errado, force a leitura da hora da sua placa-mãe:</p>
                     <div class="mini-terminal">sudo hwclock --hctosys</div>
+                </div> 
+                <div class="dica-card">
+                    <div class="step-number">5</div>
+                    <i class="fas fa-edit"></i>
+                    <h4>Ajuste Manual de Hora</h4>
+                    <p>Se o relógio da BIOS estiver errado, defina a hora manualmente (MêsDiaHoraMinutoAno):</p>
+                    <div class="mini-terminal">sudo date -s YYYY-MM-DD HH:MM:SS</div>
+                    <p style="font-size: 0.8rem; margin-top: 10px;">Depois salve na BIOS com: <br><code>sudo hwclock --systohc</code></p>
                 </div>
             </div>
         </div>
@@ -170,3 +178,4 @@
 </body>
 
 </html>
+
