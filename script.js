@@ -28,57 +28,43 @@ document.querySelectorAll('nav a[href^="#"]').forEach(anchor => {
                 top: target.offsetTop - 80, // Compensa a altura do menu fixo
                 behavior: 'smooth'
 // Adicione isto ao final do seu script.js atual
-document.querySelectorAll('.mini-terminal').forEach(item => {
-    item.style.cursor = 'pointer';
-    item.title = 'Clique para copiar';
-    
-    item.addEventListener('click', () => {
-        const text = item.innerText;
-        navigator.clipboard.writeText(text);
-        
-        const originalText = item.innerText;
-        item.innerText = 'Copiado!';
-        item.style.color = '#fff';
-        
-        setTimeout(() => {
-            item.innerText = originalText;
-            item.style.color = '#2ecc71';
-        }, 1500);
-        function copyEmail(event) {
-    event.preventDefault();
-    
-    const emailParaCopiar = "contato@paperlinux.com"; // <-- SEU EMAIL AQUI
-    const textSpan = document.getElementById("emailText");
+document.addEventListener('DOMContentLoaded', function() {
+    const btnEmail = document.getElementById('copy-email-button');
+    const textSpan = document.getElementById('emailText');
+    const emailParaCopiar = "contato@paperlinux.com"; // Troque pelo seu e-mail
 
-    // Cria um elemento de input invisível
-    const tempInput = document.createElement("input");
-    tempInput.value = emailParaCopiar;
-    document.body.appendChild(tempInput);
+    if (btnEmail) {
+        btnEmail.addEventListener('click', function() {
+            // Cria um elemento de texto invisível
+            const el = document.createElement('textarea');
+            el.value = emailParaCopiar;
+            el.setAttribute('readonly', '');
+            el.style.position = 'absolute';
+            el.style.left = '-9999px';
+            document.body.appendChild(el);
+            
+            // Seleciona e tenta copiar
+            el.select();
+            const successful = document.execCommand('copy');
+            document.body.removeChild(el);
 
-    // Seleciona e copia o conteúdo
-    tempInput.select();
-    tempInput.setSelectionRange(0, 99999); // Para dispositivos móveis
+            if (successful) {
+                const originalText = textSpan.innerText;
+                textSpan.innerText = "Copiado!";
+                btnEmail.style.backgroundColor = "#2ecc71"; // Feedback verde
 
-    try {
-        document.execCommand("copy");
-        
-        // Feedback visual
-        const originalText = textSpan.innerText;
-        textSpan.innerText = "Copiado!";
-        
-        setTimeout(() => {
-            textSpan.innerText = originalText;
-        }, 2000);
-    } catch (err) {
-        console.error("Erro ao copiar", err);
-        alert("E-mail: " + emailParaCopiar);
+                setTimeout(() => {
+                    textSpan.innerText = originalText;
+                    btnEmail.style.backgroundColor = ""; // Volta ao normal
+                }, 2000);
+            } else {
+                // Caso falhe, mostra o e-mail em um alerta como último recurso
+                alert("Não foi possível copiar automaticamente. E-mail: " + emailParaCopiar);
+            }
+        });
     }
+});
 
-    // Remove o input temporário
-    document.body.removeChild(tempInput);
-}
-    });
-}
 
 
 
