@@ -16,7 +16,9 @@
                 <li><a href="#inicio">Início</a></li>
                 <li><a href="#sobre">Sobre</a></li>
                 <li><a href="#galeria">Galeria</a></li>
-                <li><a href="#instalacao">Instalação</a></li>
+                 <li><a href="#requisitos">Instalação</a></li>
+                <li><a href="#instalacao">Requisitos</a></li>
+                 <li><a href="#pos-instalacao">Pós Instalação</a></li>
                 <li><a href="#download" class="btn-nav">Download</a></li>
             </ul>
         </div>
@@ -111,17 +113,35 @@
     <section id="download" style="background-color: #2c3e50; color: white; padding: 80px 0;">
         <div class="container text-center">
             <h3 class="section-title" style="color: white;">Download Paper Linux</h3>
-            <div class="download-grid" style="display: flex; gap: 30px; flex-wrap: wrap; justify-content: center; margin-top: 30px;">
-                <div class="dl-card" style="background: #34495e; padding: 30px; border-radius: 10px; min-width: 280px; text-align: center;">
-                    <h4>v1.0 Standard (64-bit)</h4>
-                    <a href="https://drive.proton.me/urls/QHCJ89YJK8#bqxjCCQjJKfn" target="_blank" class="btn-dl" style="background: #3498db; color: white; padding: 12px 20px; display: inline-block; margin-top: 15px; text-decoration: none; border-radius: 5px; font-weight: bold;">Download via Proton</a>
+            <p style="margin-bottom: 30px; opacity: 0.9;">Escolha a versão ideal para o seu hardware:</p>
+            
+            <div class="download-grid" style="display: flex; gap: 20px; flex-wrap: wrap; justify-content: center; margin-top: 30px;">
+                
+                <div class="dl-card" style="background: #ffffff; color: #2c3e50; padding: 30px; border-radius: 10px; width: 300px; text-align: center; border-bottom: 5px solid #27ae60; box-shadow: 0 10px 20px rgba(0,0,0,0.2);">
+                    <span style="background: #27ae60; color: white; padding: 3px 10px; border-radius: 20px; font-size: 0.7rem; font-weight: bold; text-transform: uppercase;">Recomendado ARM</span>
+                    <h4 style="margin-top: 15px;">v1.0 Desktop (ARM64)</h4>
+                    <p style="font-size: 0.85rem; margin-bottom: 15px;">Para Raspberry Pi, Macs M1/M2/M3 e Laptops ARM modernos.</p>
+                    <a href="https://drive.proton.me/urls/W85GAZXYX4#YkkcLpQ0amXN" target="_blank" class="btn-dl" style="background: #27ae60; color: white; padding: 12px 20px; display: inline-block; margin-top: 10px; text-decoration: none; border-radius: 5px; font-weight: bold; width: 100%;">Download .IMG</a>
                 </div>
-                <div class="dl-card" style="background: #34495e; padding: 30px; border-radius: 10px; min-width: 280px; text-align: center;">
-                    <h4>v1.0 Legacy (32-bit)</h4>
-                    <a href="https://drive.proton.me/urls/CH4RVC2TN0#9r54EemcpTdw" target="_blank" class="btn-dl" style="background: #e67e22; color: white; padding: 12px 20px; display: inline-block; margin-top: 15px; text-decoration: none; border-radius: 5px; font-weight: bold;">Download via Proton</a>
+
+                <div class="dl-card" style="background: #34495e; padding: 30px; border-radius: 10px; width: 300px; text-align: center; border: 1px solid #4a5d71;">
+                    <h4 style="color: white;">v1.0 Standard (x86_64)</h4>
+                    <p style="font-size: 0.85rem; margin-bottom: 15px; color: #bdc3c7;">Para PCs e Notebooks Intel ou AMD modernos.</p>
+                    <a href="https://drive.proton.me/urls/QHCJ89YJK8#bqxjCCQjJKfn" target="_blank" class="btn-dl" style="background: #3498db; color: white; padding: 12px 20px; display: inline-block; margin-top: 10px; text-decoration: none; border-radius: 5px; font-weight: bold; width: 100%;">Download via Proton</a>
                 </div>
+
+                <div class="dl-card" style="background: #34495e; padding: 30px; border-radius: 10px; width: 300px; text-align: center; border: 1px solid #4a5d71;">
+                    <h4 style="color: white;">v1.0 Legacy (32-bit)</h4>
+                    <p style="font-size: 0.85rem; margin-bottom: 15px; color: #bdc3c7;">Para hardware antigo e Netbooks de 15+ anos.</p>
+                    <a href="https://drive.proton.me/urls/CH4RVC2TN0#9r54EemcpTdw" target="_blank" class="btn-dl" style="background: #e67e22; color: white; padding: 12px 20px; display: inline-block; margin-top: 10px; text-decoration: none; border-radius: 5px; font-weight: bold; width: 100%;">Download via Proton</a>
+                </div>
+
             </div>
-            <p style="margin-top: 30px; font-size: 0.9rem; opacity: 0.8;">Dica: Se a versão 32-bit travar, use <strong>nomodeset</strong> no GRUB.</p>
+
+            <div style="margin-top: 40px; background: rgba(0,0,0,0.2); padding: 20px; border-radius: 8px; display: inline-block;">
+                <p style="font-size: 0.9rem; margin: 5px 0;"><i class="fas fa-info-circle"></i> <strong>Instrução ARM:</strong> Grave no cartão SD/Pendrive usando o BalenaEtcher ou <code>dd</code>.</p>
+                <p style="font-size: 0.9rem; margin: 5px 0; opacity: 0.8;">Dica Legacy: Se travar, use <strong>nomodeset</strong> no GRUB.</p>
+            </div>
         </div>
     </section>
 
@@ -164,13 +184,3 @@
     <script src="script.js"></script>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
