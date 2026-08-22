@@ -129,31 +129,39 @@
         <h3 class="section-title" style="color: white;">Download Paper Linux</h3>
         <p style="margin-bottom: 30px; opacity: 0.9;">Escolha a versão ideal para a arquitetura do seu computador:</p>
         
-        <div class="download-grid" style="display: flex; gap: 20px; flex-wrap: wrap; justify-content: center; margin-top: 30px;">
-            
-            <div class="dl-card" style="background: #ffffff; color: #2c3e50; padding: 30px; border-radius: 10px; width: 300px; text-align: center; border-bottom: 5px solid #3498db; box-shadow: 0 10px 20px rgba(0,0,0,0.2);">
-                <span style="background: #3498db; color: white; padding: 3px 10px; border-radius: 20px; font-size: 0.7rem; font-weight: bold; text-transform: uppercase;">Standard 64-bit</span>
-                <h4 style="margin-top: 15px;">v1.0 Xfce (x86_64)</h4>
-                <p style="font-size: 0.85rem; margin-bottom: 15px;">Para PCs e Notebooks Intel ou AMD de 64 bits (BIOS & UEFI).</p>
-                <a href="https://github.com/gabrielplays0404/paper-linux/releases/download/2.0/paper-linux-2.0-amd64-x64.iso" target="_blank" onclick="alertarSHA('x64')" class="btn-dl" style="background: #3498db; color: white; padding: 12px 20px; display: inline-block; margin-top: 10px; text-decoration: none; border-radius: 5px; font-weight: bold; width: 100%;">Download ISO (64-bit)</a>
-            </div>
-
-            <div class="dl-card" style="background: #ffffff; color: #2c3e50; padding: 30px; border-radius: 10px; width: 300px; text-align: center; border-bottom: 5px solid #e67e22; box-shadow: 0 10px 20px rgba(0,0,0,0.2);">
-                <span style="background: #e67e22; color: white; padding: 3px 10px; border-radius: 20px; font-size: 0.7rem; font-weight: bold; text-transform: uppercase;">Legacy 32-bit</span>
-                <h4 style="margin-top: 15px;">v1.0 IceWM (i386)</h4>
-                <p style="font-size: 0.85rem; margin-bottom: 15px;">Para PCs antigos, Netbooks e processadores de 32 bits.</p>
-                <a href="https://github.com/gabrielplays0404/paper-linux/releases/download/2.0/paper-linux-2.0-i386-x86.iso" target="_blank" onclick="alertarSHA('x32')" class="btn-dl" style="background: #e67e22; color: white; padding: 12px 20px; display: inline-block; margin-top: 10px; text-decoration: none; border-radius: 5px; font-weight: bold; width: 100%;">Download ISO (32-bit)</a>
-            </div>
-
-            <div class="dl-card" style="background: #ffffff; color: #2c3e50; padding: 30px; border-radius: 10px; width: 300px; text-align: center; border-bottom: 5px solid #27ae60; box-shadow: 0 10px 20px rgba(0,0,0,0.2);">
-                <span style="background: #27ae60; color: white; padding: 3px 10px; border-radius: 20px; font-size: 0.7rem; font-weight: bold; text-transform: uppercase;">ARM64</span>
-                <h4 style="margin-top: 15px;">v1.0 Mobile / ARM</h4>
-                <p style="font-size: 0.85rem; margin-bottom: 15px;">Para Single Board Computers e dispositivos ARM64.</p>
-                <a href="https://drive.proton.me/urls/W85GAZXYX4#YkkcLpQ0amXN" target="_blank" class="btn-dl" style="background: #27ae60; color: white; padding: 12px 20px; display: inline-block; margin-top: 10px; text-decoration: none; border-radius: 5px; font-weight: bold; width: 100%;">Download .IMG</a>
-            </div>
-
-        </div>
+       <div class="download-grid" style="display: flex; gap: 20px; flex-wrap: wrap; justify-content: center; margin-top: 30px;">
+    
+    <!-- Card 64-bit -->
+    <div class="dl-card" style="background: #ffffff; color: #2c3e50; padding: 30px; border-radius: 10px; width: 300px; text-align: center; border-bottom: 5px solid #3498db; box-shadow: 0 10px 20px rgba(0,0,0,0.2);">
+        <span style="background: #3498db; color: white; padding: 3px 10px; border-radius: 20px; font-size: 0.7rem; font-weight: bold; text-transform: uppercase;">Standard 64-bit</span>
+        <h4 style="margin-top: 15px;">v2.0 Xfce (amd64)</h4>
+        <p style="font-size: 0.85rem; margin-bottom: 15px;">Para PCs e Notebooks Intel ou AMD de 64 bits (BIOS & UEFI).</p>
+        <a href="https://github.com/gabrielplays0404/paper-linux/releases/download/2.0/paper-linux-2.0-amd64-x64.iso" target="_blank" onclick="alertarSHA('x64')" class="btn-dl" style="background: #3498db; color: white; padding: 12px 20px; display: inline-block; margin-top: 10px; text-decoration: none; border-radius: 5px; font-weight: bold; width: 100%;">
+            <i class="fab fa-github"></i> Download ISO (64-bit)
+        </a>
     </div>
+
+    <!-- Card 32-bit -->
+    <div class="dl-card" style="background: #ffffff; color: #2c3e50; padding: 30px; border-radius: 10px; width: 300px; text-align: center; border-bottom: 5px solid #e67e22; box-shadow: 0 10px 20px rgba(0,0,0,0.2);">
+        <span style="background: #e67e22; color: white; padding: 3px 10px; border-radius: 20px; font-size: 0.7rem; font-weight: bold; text-transform: uppercase;">Legacy 32-bit</span>
+        <h4 style="margin-top: 15px;">v2.0 IceWM (i386)</h4>
+        <p style="font-size: 0.85rem; margin-bottom: 15px;">Para PCs antigos, Netbooks e processadores de 32 bits.</p>
+        <a href="https://github.com/gabrielplays0404/paper-linux/releases/download/2.0/paper-linux-2.0-i386-x86.iso" target="_blank" onclick="alertarSHA('x32')" class="btn-dl" style="background: #e67e22; color: white; padding: 12px 20px; display: inline-block; margin-top: 10px; text-decoration: none; border-radius: 5px; font-weight: bold; width: 100%;">
+            <i class="fab fa-github"></i> Download ISO (32-bit)
+        </a>
+    </div>
+
+    <!-- Card ARM64 -->
+    <div class="dl-card" style="background: #ffffff; color: #2c3e50; padding: 30px; border-radius: 10px; width: 300px; text-align: center; border-bottom: 5px solid #27ae60; box-shadow: 0 10px 20px rgba(0,0,0,0.2);">
+        <span style="background: #27ae60; color: white; padding: 3px 10px; border-radius: 20px; font-size: 0.7rem; font-weight: bold; text-transform: uppercase;">ARM64</span>
+        <h4 style="margin-top: 15px;">v1.0 Mobile / ARM</h4>
+        <p style="font-size: 0.85rem; margin-bottom: 15px;">Para Single Board Computers e dispositivos ARM64.</p>
+        <a href="https://drive.proton.me/urls/W85GAZXYX4#YkkcLpQ0amXN" target="_blank" class="btn-dl" style="background: #27ae60; color: white; padding: 12px 20px; display: inline-block; margin-top: 10px; text-decoration: none; border-radius: 5px; font-weight: bold; width: 100%;">
+            Download .IMG
+        </a>
+    </div>
+
+</div>
 </section>
 
             <div style="margin-top: 40px; background: rgba(0,0,0,0.2); padding: 20px; border-radius: 8px; display: inline-block;">
