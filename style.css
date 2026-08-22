@@ -151,9 +151,10 @@ footer { padding: 50px 0; background: #eee; text-align: center; font-size: 0.9re
 /* Galeria de Imagens */
 .galeria-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    /* Reduz o tamanho mínimo para 250px para caber mais imagens por linha em telas grandes */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 20px;
-    margin-top: 30px;
+    margin-top: 20px;
 }
 
 .foto {
